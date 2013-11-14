@@ -48,7 +48,7 @@ module Pixlee
 
     	# Method to get users albums. Options accepts: type, sort
     	def get_users_albums(user_id, options = {})
-    	    json = call_api("http://api.pixlee.com/v1/#{user_id}", options)
+    	    json = call_api("https://api.pixlee.com/v1/#{user_id}", options)
 
     	    reponse = json["data"]["photo"]
 
@@ -59,7 +59,7 @@ module Pixlee
 
     	# Base URL for most API calls (except user lookups)
     	def base_url
-    	    return "http://api.pixlee.com/v1/#{@app_name}"
+    	    return "https://api.pixlee.com/v1/#{@app_name}"
     	end
 
     	# Private method to actually make the call to the api and parse the json
